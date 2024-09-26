@@ -1,0 +1,147 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #3f5efb, #fc466b);
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+header h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 20px;
+    animation: fadeInDown 1s ease-out;
+}
+
+/* Stopwatch Container */
+.stopwatch-container {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    animation: scaleUp 0.5s ease-out;
+}
+
+.time-display {
+    font-size: 5rem;
+    margin-bottom: 20px;
+    color: white;
+    letter-spacing: 2px;
+    transition: all 0.5s ease;
+}
+
+.controls button {
+    background-color: #ff5757;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.controls button:hover {
+    background-color: #ff2f2f;
+    transform: scale(1.1);
+}
+
+#lapBtn {
+    background-color: #28c76f;
+}
+
+#lapBtn:hover {
+    background-color: #22a557;
+}
+
+#historyBtn {
+    background-color: #ff9f43;
+}
+
+#historyBtn:hover {
+    background-color: #f08733;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0.8);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+/* Lap Times */
+.lap-times {
+    margin-top: 20px;
+    max-height: 300px;
+    overflow-y: auto;
+    animation: fadeInUp 0.5s ease-out;
+}
+
+.lap-times div {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+footer {
+    position: fixed;
+    bottom: 10px;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    .time-display {
+        font-size: 4rem;
+    }
+
+    .controls button {
+        padding: 8px 16px;
+        font-size: 1rem;
+    }
+}
